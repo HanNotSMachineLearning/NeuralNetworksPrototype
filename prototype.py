@@ -6,7 +6,7 @@ from sklearn.neural_network import MLPClassifier
 
 # read csv files
 available_symptoms = []
-with open('trainingsdata.csv', 'r') as DataFile:
+with open('Data/Dataset.csv', 'r') as DataFile:
     csv_file = list(csv.reader(DataFile))
     available_symptoms = list(
         map(lambda v: v.strip().lower(), csv_file[0]))[2:-1]
@@ -41,7 +41,6 @@ for item in trainData:
     features.append(item[:-1].copy())
 
 # create a decision tree classifier
-# clf = tree.DecisionTreeClassifier()
 clf = MLPClassifier(hidden_layer_sizes=(10, 10, 10), max_iter=100000)
 # train the classifier with the trainingsdata
 clf = clf.fit(features, labels)

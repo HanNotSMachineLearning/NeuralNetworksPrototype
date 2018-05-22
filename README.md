@@ -1,38 +1,65 @@
-# Decision tree (ziekten)
+# Documentatie neural network algoritme prototype
 
-## Vereisten
-> Leg uit wat de vereisten zijn om de code te kunnen draaien
+Dit prototype is onderdeel van een reeks van prototypes die gebouwd zijn ter ondersteuning van deelvraag 8: 'Welke algoritmes van machine learning sluiten het beste aan op deze casus? ' van het onderzoek 'Machine learning voor de huisarts'. Door middel van deze prototypes wordt getest welk machine learning algoritme het meest geschikt is om te gebruiken binnen de casus van het onderzoek. Alle prototypes worden geschreven in Python en maken gebruik van het TensorFlow machine learning framework.
 
-Het prototype is gebouwd en getest op 64-bits Windows- en 64-bits Linux-systemen om de werking van de code te verifiëren.
 
-Voor deze demo dienen een aantal zaken geïnstalleerd te zijn op de omgeving waarin deze demo wordt uitgevoerd.
 
-- Python versie 3.6   (https://www.python.org/downloads/release/python-364/)
-- Pip versie 10.0     (https://pip.pypa.io/en/stable/installing/)
+## Algoritme
+
+Hier moet tekst komen!!!!!!!!!!!!
+
+
+
+## Trainingsdata
+
+Om het machine learning algoritme te trainen wordt er gebruik gemaakt van een dataset bestaande uit ziektes en hun bijbehorende symptomen. De dataset is terug te vinden in de folder `Data`  binnen de projectfolder van het prototype.
+
+
+
+## Afhankelijkheden
+
+Zoals eerder genoemd is het prototype geschreven in python, om precies te zijn versie 3.6. Daarnaast wordt PIP versie 10.0 gebruikt voor het installeren en beheren van de verschillende externe packages die gebruikt worden in het prototype. Het is dus van belang dat de volgende zaken aanwezig zijn op machine waarop het prototype gedraaid wordt.
+
+- Python versie 3.6   	(https://www.python.org/downloads/release/python-364/)
+- Pip versie 10.0              (https://pip.pypa.io/en/stable/installing/)
+
+```
+!-- LETOP --!
+Het is van belang dat python wordt toegevoegd aan je Windows Path variable. 
+Hiervoor is een optie te vinden in de installatiewizzard van Python.
+```
+
+
 
 ## Installatie
-> Leg uit hoe je de code kan draaien
 
-Om de programmacode te draaien heb je de volgende Python-modulen nodig:
+Om het prototype te draaien dienen er een aantal externe packages geïnstalleerd te worden:
 
 - csv (voor het lezen van de dataset)
 - sklearn (voor het aanleveren van functies om machine learning mogelijk te maken in Python)
 - random (voor het shufflen van de dataset voordat je scheidt naar training- en testset)
 
-Door het commando `pip install -r requirements.txt --user` uit te voeren in een opdrachtvenster worden alle modules in één keer gedownload.
+Al deze packages zijn te installeren door het commando `pip install -r requirements.txt --user` uit te voeren in een Terminal venster in de projectfolder van het prototype. Dit commando zorgt ervoor dat alle benodigde packages in een keer gedownload worden.
 
-## Data
-De dataset is zelfbedacht en de gegevens zijn geen echte gegevens, maar er wordt geprobeerd zo realistisch mogelijk de symptomen te linken met de ziekten. De dataset kan onderscheid maken tussen hooikoorts, longontsteking en het hebben van geen ziekte. Dit wordt voor de gebruiker gedaan door de symptomen die hij of zij invult gecorrespondeert worden met de ja/nee-waarden van de symptomen in de dataset.
 
-## Demo code
+
+## Opstarten
+
+Het prototype kan gestart worden door het commando `python prototype.py` uit te voeren in een Terminal verster in de projectfolder van het prototype.
+
+
+
+## Code
 ```python
 import csv
 from random import shuffle
-from sklearn import tree
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
 
 # read csv files
 available_symptoms = []
-with open('longontsteking_data.csv', 'r') as DataFile:
+with open('Data/Dataset.csv', 'r') as DataFile:
     csv_file = list(csv.reader(DataFile))
     available_symptoms = list(
         map(lambda v: v.strip().lower(), csv_file[0]))[2:-1]
@@ -53,19 +80,27 @@ test_labels = []
 features = []
 labels = []
 
+ziektes = ['Astma', 'Bronchitis', 'Griep', 'Longontsteking', 'Verkoudheid']
+
 # split labels from features
 for item in testData:
+    item = list(map(lambda v: int(v), item))
     test_labels.append(item[-1])
     test_features.append(item[:-1].copy())
 
 for item in trainData:
+    item = list(map(lambda v: int(v), item))
     labels.append(item[-1])
     features.append(item[:-1].copy())
 
 # create a decision tree classifier
-DT_clf = tree.DecisionTreeClassifier()
+clf = MLPClassifier(hidden_layer_sizes=(10, 10, 10), max_iter=100000)
 # train the classifier with the trainingsdata
-DT_clf = DT_clf.fit(features, labels)
+clf = clf.fit(features, labels)
+
+# Verkrijg de accuraatheid
+y_pred = clf.predict(test_features)
+print("Accuraatheid is: " + str(metrics.accuracy_score(test_labels, y_pred)))
 
 print("\nDeze applicatie kan bekijken of je longontsteking, hooikoorts of geen ziekte hebt. Hiervoor worden er een aantal vragen gesteld.")
 
@@ -98,16 +133,10 @@ while True:
     for available_symptom in available_symptoms:
         symptoms_array.append(1 if available_symptom in symptoms else 0)
 
-    prediction = int(DT_clf.predict([symptoms_array])[0])
+    prediction = int(clf.predict([symptoms_array])[0])
 
     print("\n\n👉 De applicatie geeft aan dat u de volgende ziekte heeft:")
-    if prediction == 1:
-        print("Longontsteking")
-    elif prediction == 2:
-        print("Hooikoorts")
-    else:
-        print("Helemaal niets")
-
+    print(ziektes[prediction])
     print("\nUw ziekte is bepaald. Druk op 'j' om de applicatie te herstarten.")
     again = input("")
     if again.upper() != "J":
@@ -116,7 +145,4 @@ while True:
 print("\nU heeft aangegeven dat u geen behoefte meer heeft om de applicatie te herstarten. Fijne dag.")
 ```
 
-## Resultaat van de applicatie
-![Illustratie van het plot](longontsteking.png)
-
-De code geeft je een vragenlijst die je kunt beantwoorden met `0` (nee) of `1` (ja). De vragen zijn wat je geslacht is, je leeftijd, en welke symptomen je ondervindt. Gebaseerd daarop vertelt de applicatie of je een hooikoorts, longontsteking of geen ziekte hebt.
+&copy;2018 - NotS project machine learning 2018

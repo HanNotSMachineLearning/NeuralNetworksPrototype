@@ -33,9 +33,7 @@ Hiervoor is een optie te vinden in de installatiewizzard van Python.
 
 Om het prototype te draaien dienen er een aantal externe packages geïnstalleerd te worden:
 
-- csv (voor het lezen van de dataset)
 - sklearn (voor het aanleveren van functies om machine learning mogelijk te maken in Python)
-- random (voor het shufflen van de dataset voordat je scheidt naar training- en testset)
 
 Al deze packages zijn te installeren door het commando `pip install -r requirements.txt --user` uit te voeren in een Terminal venster in de projectfolder van het prototype. Dit commando zorgt ervoor dat alle benodigde packages in een keer gedownload worden.
 

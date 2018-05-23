@@ -58,18 +58,17 @@ from sklearn.neural_network import MLPClassifier
 # read csv files
 available_symptoms = []
 with open('Data/Dataset.csv', 'r') as DataFile:
-    csv_file = list(csv.reader(DataFile))
+    train_data = list(csv.reader(DataFile))
     available_symptoms = list(
-        map(lambda v: v.strip().lower(), csv_file[0]))[2:-1]
-    csvList = csv_file[1:]
-    shuffle(csvList)
-    trainDataCount = round(len(csvList) * 7 / 10) + 1
-    print("Er worden " + str(trainDataCount) +
+        map(lambda v: v.strip().lower(), train_data[0]))[2:-1]
+    train_data = train_data[1:]
+    print("Er worden " + str(len(train_data) - 1) +
           " rijen gebruikt om de applicatie te trainen.")
-    print("Er worden " + str(len(csvList) - trainDataCount) +
+
+    with open('Testdata.csv', 'r') as TestDataFile:
+        test_data = list(csv.reader(TestDataFile))[1:]
+        print("Er worden " + str(len(test_data) - 1) +
           " rijen gebruikt om de applicatie te testen.")
-    trainData = csvList[0:trainDataCount].copy()
-    testData = csvList[trainDataCount:].copy()
 
 # datasets
 test_features = []
@@ -81,12 +80,12 @@ labels = []
 ziektes = ['Astma', 'Bronchitis', 'Griep', 'Longontsteking', 'Verkoudheid']
 
 # split labels from features
-for item in testData:
+for item in test_data:
     item = list(map(lambda v: int(v), item))
     test_labels.append(item[-1])
     test_features.append(item[:-1].copy())
 
-for item in trainData:
+for item in train_data:
     item = list(map(lambda v: int(v), item))
     labels.append(item[-1])
     features.append(item[:-1].copy())
@@ -100,7 +99,10 @@ clf = clf.fit(features, labels)
 y_pred = clf.predict(test_features)
 print("Accuraatheid is: " + str(metrics.accuracy_score(test_labels, y_pred)))
 
-print("\nDeze applicatie kan bekijken of je longontsteking, hooikoorts of geen ziekte hebt. Hiervoor worden er een aantal vragen gesteld.")
+print("\nDeze applicatie kan bekijken of je de volgende ziektes hebt:")
+print(", ".join(ziektes))
+
+print("\nOm de ziekte te bepalen worden er een aantal vragen gesteld.")
 
 while True:
     print("\nWat is jouw geslacht? (0 voor VROUW, 1 voor MAN)")

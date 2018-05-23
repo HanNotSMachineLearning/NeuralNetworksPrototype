@@ -49,7 +49,7 @@ y_pred = clf.predict(test_features)
 print("Accuraatheid is: " + str(metrics.accuracy_score(test_labels, y_pred)))
 
 print("\nDeze applicatie kan bekijken of je de volgende ziektes hebt:")
-print(ziektes)
+print(", ".join(ziektes))
 
 print("\nOm de ziekte te bepalen worden er een aantal vragen gesteld.")
 

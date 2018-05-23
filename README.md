@@ -6,9 +6,7 @@ Dit prototype is onderdeel van een reeks van prototypes die gebouwd zijn ter ond
 
 ## Algoritme
 
-Hier moet tekst komen!!!!!!!!!!!!
-
-
+Het algoritme dat gebruikt wordt is een 'meerlagige perceptron' (MLP), en is een vorm van een neuraal netwerk waarbij informatie altijd in dezelfde richting loopt. Een neuraal netwerk is een groep van neuronen of zenuwcellen die verbonden met elkaar zijn. Het algoritme bestaat uit minstens drie lagen nodes. Deze lagen zijn de input, output laag met een of meerdere verborgen lagen. Behalve voor de input node is elke node een neuroon. MLP gebruikt een supervised learning techniek genaamd backpropagation om te leren.
 
 ## Trainingsdata
 

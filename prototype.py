@@ -11,13 +11,13 @@ with open('Data/Dataset.csv', 'r') as DataFile:
     available_symptoms = list(
         map(lambda v: v.strip().lower(), train_data[0]))[2:-1]
     train_data = train_data[1:]
-    print("Er worden " + str(len(train_data) - 1) +
+    print("Er worden " + str(len(train_data)) +
           " rijen gebruikt om de applicatie te trainen.")
 
     with open('Testdata.csv', 'r') as TestDataFile:
         test_data = list(csv.reader(TestDataFile))[1:]
-        print("Er worden " + str(len(test_data) - 1) +
-          " rijen gebruikt om de applicatie te testen.")
+        print("Er worden " + str(len(test_data)) +
+              " rijen gebruikt om de applicatie te testen.")
 
 # datasets
 test_features = []

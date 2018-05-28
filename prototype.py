@@ -6,7 +6,7 @@ from sklearn.neural_network import MLPClassifier
 
 # read csv files
 available_symptoms = []
-with open('Data/Dataset.csv', 'r') as DataFile:
+with open('Data/Dataset-100.csv', 'r') as DataFile:
     train_data = list(csv.reader(DataFile))
     available_symptoms = list(
         map(lambda v: v.strip().lower(), train_data[0]))[2:-1]

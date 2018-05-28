@@ -1,0 +1,32 @@
+Geslacht:
+Man 0
+Vrouw 1
+
+Symptomen
+Niet aanwezig 0
+Aanwezig 1
+
+Symptomen
+Benauwdheid 0
+Gebrek aan eetlust 1
+Hoesten 2
+Hoge slijmproductie 3
+Hoofdpijn 4
+Keelpijn 5
+Koorts 6
+Kortademig 7
+Neusvleugelen 8
+Niezen 9
+Piepende ademhaling 10
+Pijn bij borst 11
+Spierpijn 12
+Vermoeidheid 13
+Verstopte neus 14
+
+ziekten
+astma 0
+bronchitis 1
+Griep 2
+Longontsteking 3
+Verkoudheid 4
+

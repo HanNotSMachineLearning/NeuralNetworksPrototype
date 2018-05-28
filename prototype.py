@@ -14,7 +14,7 @@ with open('Data/Dataset.csv', 'r') as DataFile:
     print("Er worden " + str(len(train_data)) +
           " rijen gebruikt om de applicatie te trainen.")
 
-    with open('Testdata.csv', 'r') as TestDataFile:
+    with open('Data/Testdata.csv', 'r') as TestDataFile:
         test_data = list(csv.reader(TestDataFile))[1:]
         print("Er worden " + str(len(test_data)) +
               " rijen gebruikt om de applicatie te testen.")

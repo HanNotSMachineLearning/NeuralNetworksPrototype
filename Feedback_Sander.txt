@@ -1,0 +1,3 @@
+- (Dit geldt ook voor de decisiontree prototype) Module CSV mist in de requirements.txt en de documentatie, deze module is niet standaard geïnstalleerd vgm.
+
+voor de rest ziet het er prima uit

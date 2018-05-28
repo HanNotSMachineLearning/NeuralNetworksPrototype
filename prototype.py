@@ -48,23 +48,23 @@ clf = clf.fit(features, labels)
 y_pred = clf.predict(test_features)
 print("Accuraatheid is: " + str(metrics.accuracy_score(test_labels, y_pred)))
 
-print("\nDeze applicatie kan bekijken of je de volgende ziektes hebt:")
+print("\nDeze applicatie kan bekijken of u de volgende ziektes hebt:")
 print(", ".join(ziektes))
 
 print("\nOm de ziekte te bepalen worden er een aantal vragen gesteld.")
 
 while True:
-    print("\nWat is jouw geslacht? (0 voor VROUW, 1 voor MAN)")
+    print("\nWat is uw geslacht? (0 voor VROUW, 1 voor MAN)")
     geslacht = int(input(""))
 
-    print("\nWat is jouw leeftijd?")
+    print("\nWat is uw leeftijd?")
     leeftijd = int(input(""))
 
     symptoms = None
     while symptoms is None:
         print("\nDe beschikbare symptomen zijn:")
         print(", ".join(available_symptoms))
-        print("\nVul je symptomen in, gescheiden door een comma:")
+        print("\nVul uw symptomen in, gescheiden door een comma:")
         symptoms = list(map(lambda v: v.strip().lower(), input("").split(",")))
 
         existing_symptoms = list(

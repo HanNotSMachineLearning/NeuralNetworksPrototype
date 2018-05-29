@@ -94,10 +94,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 5 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer             | man                   | 44                 | benauwdheid, piepende ademhaling, hoesten, kortademig, koorts | astma | j    |
-| developer             | man                   | 22                 |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
+| developer             | man                   | 44                 | benauwdheid, piepende ademhaling, hoesten, kortademig, koorts | astma | n (bronchitis) |
+| developer             | man                   | 22                 | hoesten, hoge slijmproductie, piepende ademhaling, koorts, spierpijn | bronchitis | j |
+| developer             | vrouw                 | 56                 | hoesten, gebrek aan eetlust, koorts, keelpijn, verstopte neus | verkoudheid | n (griep) |
+| developer             | vrouw                 | 33                 | koorts, hoesten, keelpijn, spierpijn, verstopte neus | griep | j             |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |

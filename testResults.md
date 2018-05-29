@@ -1,6 +1,7 @@
 # Testresultaten - Neural networks
 
 In dit document staan de verschillende resultaten van het testen van het prototype uitgewerkt.
+
 Developer: Robin Bozan
 
 Reviewer 1: 

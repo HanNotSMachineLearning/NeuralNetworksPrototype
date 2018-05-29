@@ -54,10 +54,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 | developer             | man                   | 44                 | piepende ademhaling, kortademig | longontsteking | n (astma)                 |
 | developer             | vrouw                 | 77                 | verstopte neus, niezen | verkoudheid       | j                               |
 | developer             | man                   | 69                 | hoge slijmproductie, verstopte neus | bronchitis | n (astma)                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
+| reviewer 1            | man | 12 | Hoesten, Piepende ademhaling | Bronchitis | J |
+| reviewer 1            | vrouw | 53 | Hoesten,  Kortademig | Astma | J |
+| reviewer 1            | vrouw | 23 | Hoofdpijn, Vermoeidheid | Griep | N (Verkoudheid) |
+| reviewer 1            | man | 25 | Verstopte neus, Niezen | Verkoudheid | J |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
@@ -69,10 +69,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 | developer             | vrouw                 | 55                 | spierpijn, vermoeidheid, neusvleugelen | longontsteking | j                  |
 | developer             | vrouw                 | 88                 | hoesten, niezen, keelpijn | verkoudheid | n (astma)                          |
 | developer             | man                   | 19                 | hoesten, piepende ademhaling, kortademig | bronchitis | n (astma)            |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
+| reviewer 1            | vrouw | 11 | Hoofdpijn,  Keelpijn, Hoesten | Verkoudheid | N (Griep) |
+| reviewer 1            | vrouw | 19 | Verstopte Neus, Hoesten, Keelpijn | Verkoudheid | J |
+| reviewer 1            | vrouw | 56 | Keelpijn, Hoge slijmproductie,  Pijn bij borst | Longontsteking | N (Griep) |
+| reviewer 1            | man | 73 | Hoesten, Koorts, Keelpijn | Griep | J |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
@@ -84,10 +84,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 | developer             | vrouw                 | 43                 | kortademig, benauwdheid, hoesten, piepende ademhaling | astma | j            |
 | developer             | man                   | 20                 | hoesten, keelpijn, spierpijn, hoofdpijn | griep | n (verkoudheid)            |
 | developer             | man                   | 99                 | hoge slijmproductie, koorts, spierpijn, piepende ademhaling | bronchitis | j |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
+| reviewer 1            | man | 37 | Benauwdheid,  Kortademig,  Hoesten,  Piepende ademhaling | Astma | J |
+| reviewer 1            | vrouw | 24 | Neusvleugelen, Koorts, Kortademig,Vermoeidheid | Longontsteking | J |
+| reviewer 1            | man | 44 | Hoesten, Keelpijn, Pijn bij borst, Piepende ademhaling | Bronchitis | N (Longontsteking) |
+| reviewer 1            | vrouw | 61 | Gebrek aan eetlust, Hoesten,  Koorts, Niezen | Verkoudheid | N (Griep) |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
@@ -99,10 +99,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 | developer             | man                   | 22                 | hoesten, hoge slijmproductie, piepende ademhaling, koorts, spierpijn | bronchitis | j |
 | developer             | vrouw                 | 56                 | hoesten, gebrek aan eetlust, koorts, keelpijn, verstopte neus | verkoudheid | n (griep) |
 | developer             | vrouw                 | 33                 | koorts, hoesten, keelpijn, spierpijn, verstopte neus | griep | j             |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
-| reviewer 1            |                       |                    |                   |                        |                                 |
+| reviewer 1            | man | 21 | Koorts, Hoesten, Hoofdpijn, Keelpijn,  Hoge slijmproductie | Griep | J |
+| reviewer 1            | man | 66 | Hoesten, Keelpijn,  Hoge slijmproductie,  Pijn bij borst,  Kortademig | Bronchitis | N (Griep) |
+| reviewer 1            | man | 45 | Keelpijn, Gebrek aan eetlust, Spierpijn,  Vermoeidheid,  Verstopte Neus | Verkoudheid | N (Griep) |
+| reviewer 1            | vrouw | 28 | Hoesten,  Benauwdheid,  Gebrek aan eetlust,  Kortademig,  Neusvleugelen | Astma | N (Griep) |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |
 | reviewer 2            |                       |                    |                   |                        |                                 |

@@ -2,9 +2,9 @@
 
 In dit document staan de verschillende resultaten van het testen van het prototype uitgewerkt.
 
-Developer: Robin Bozan
+Developer: Robin
 
-Reviewer 1: 
+Reviewer 1:  Sander
 
 Reviewer 2: 	
 
@@ -22,10 +22,10 @@ De onderstaande tabel bevat de waardes van de gemiddelde accuraatheids percentag
 
 | Percentage data          | Developer | Reviewer 1 | Reviewer 2 |
 | ------------------------ | --------- | ---------- | ---------- |
-| **25% van de dataset**   | 63⅓ %     |            |            |
-| **50% van de dataset**   | 73⅓ %     |            |            |
-| **75% van de dataset**   | 80 %      |            |            |
-| **100%  van de dataset** | 83⅓ %     |            |            |
+| **25% van de dataset**   | 63⅓ %     | 53,33%     |            |
+| **50% van de dataset**   | 73⅓ %     | 63,33%     |            |
+| **75% van de dataset**   | 80 %      | 83,33%     |            |
+| **100%  van de dataset** | 83⅓ %     | 83,33%     |            |
 
 #### Aantal ingevoerde symptomen
 
@@ -33,20 +33,20 @@ Naast de afhankelijkheid van de accuraatheid ten opzichte van de grootte van de 
 
 In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd om de accuraatheid te bepalen.
 
-| 1 symptoom ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
-| -------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer            | man                   | 21                 | hoesten           | astma                  | j                               |
-| developer            | man                   | 53                 | pijn bij borst    | longontsteking         | n (astma)                       |
-| developer            | vrouw                 | 18                 | niezen            | griep                  | n (verkoudheid)                 |
-| developer            | vrouw                 | 25                 | kortademig        | astma                  | j                               |
-| reviewer 1           |                       |                    |                   |                        |                                 |
-| reviewer 1           |                       |                    |                   |                        |                                 |
-| reviewer 1           |                       |                    |                   |                        |                                 |
-| reviewer 1           |                       |                    |                   |                        |                                 |
-| reviewer 2           |                       |                    |                   |                        |                                 |
-| reviewer 2           |                       |                    |                   |                        |                                 |
-| reviewer 2           |                       |                    |                   |                        |                                 |
-| reviewer 2           |                       |                    |                   |                        |                                 |
+| 1 symptoom ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom   | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
+| -------------------- | --------------------- | ------------------ | ------------------- | ---------------------- | ------------------------------- |
+| developer            | man                   | 21                 | hoesten             | astma                  | j                               |
+| developer            | man                   | 53                 | pijn bij borst      | longontsteking         | n (astma)                       |
+| developer            | vrouw                 | 18                 | niezen              | griep                  | n (verkoudheid)                 |
+| developer            | vrouw                 | 25                 | kortademig          | astma                  | j                               |
+| reviewer 1           | man                   | 17                 | Hoesten             | verkoudheid            | N (Astma)                       |
+| reviewer 1           | man                   | 70                 | Niezen              | verkoudheid            | N (Longontsteking)              |
+| reviewer 1           | vrouw                 | 44                 | Hoge slijmproductie | Bronchitis             | J                               |
+| reviewer 1           | man                   | 38                 | Kortademig          | Astma                  | J                               |
+| reviewer 2           |                       |                    |                     |                        |                                 |
+| reviewer 2           |                       |                    |                     |                        |                                 |
+| reviewer 2           |                       |                    |                     |                        |                                 |
+| reviewer 2           |                       |                    |                     |                        |                                 |
 
 | 2 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |

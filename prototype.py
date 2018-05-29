@@ -73,7 +73,7 @@ while True:
             print("\nU mag alleen symptomen opnoemen die bij ons geregistreerd zijn. De symptomen die u invulde maar niet bij ons geregistreerd staan zijn:")
             not_existing_symptoms = list(
                 set(symptoms) - set(existing_symptoms))
-            print (", ".join(not_existing_symptoms))
+            print(", ".join(not_existing_symptoms))
 
             symptoms = None
 

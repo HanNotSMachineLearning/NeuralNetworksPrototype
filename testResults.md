@@ -1,11 +1,11 @@
 # Testresultaten - Neural networks
 
 In dit document staan de verschillende resultaten van het testen van het prototype uitgewerkt.
-Developer:		
+Developer: Robin Bozan
 
-Reviewer 1:		
+Reviewer 1: 
 
-Reviewer 2:		
+Reviewer 2: 	
 
 
 
@@ -21,10 +21,10 @@ De onderstaande tabel bevat de waardes van de gemiddelde accuraatheids percentag
 
 | Percentage data          | Developer | Reviewer 1 | Reviewer 2 |
 | ------------------------ | --------- | ---------- | ---------- |
-| **25% van de dataset**   |   .       |            |            |
-| **50% van de dataset**   |           |            |            |
-| **75% van de dataset**   |           |            |            |
-| **100%  van de dataset** |           |            |            |
+| **25% van de dataset**   | 63⅓ %     |            |            |
+| **50% van de dataset**   | 73⅓ %     |            |            |
+| **75% van de dataset**   | 80 %      |            |            |
+| **100%  van de dataset** | 83⅓ %     |            |            |
 
 #### Aantal ingevoerde symptomen
 
@@ -34,10 +34,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 1 symptoom ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | -------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer            |                       |                    |                   |                        |                                 |
-| developer            |                       |                    |                   |                        |                                 |
-| developer            |                       |                    |                   |                        |                                 |
-| developer            |                       |                    |                   |                        |                                 |
+| developer            | man                   | 21                 | hoesten           | astma                  | j                               |
+| developer            | man                   | 53                 | pijn bij borst    | longontsteking         | n (astma)                       |
+| developer            | vrouw                 | 18                 | niezen            | griep                  | n (verkoudheid)                 |
+| developer            | vrouw                 | 25                 | kortademig        | astma                  | j                               |
 | reviewer 1           |                       |                    |                   |                        |                                 |
 | reviewer 1           |                       |                    |                   |                        |                                 |
 | reviewer 1           |                       |                    |                   |                        |                                 |
@@ -49,10 +49,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 2 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
+| developer             | vrouw                 | 36                 | hoesten, keelpijn | griep                  | j                               |
+| developer             | man                   | 44                 | piepende ademhaling, kortademig | longontsteking | n (astma)                 |
+| developer             | vrouw                 | 77                 | verstopte neus, niezen | verkoudheid       | j                               |
+| developer             | man                   | 69                 | hoge slijmproductie, verstopte neus | bronchitis | n (astma)                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
@@ -64,10 +64,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 3 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
+| developer             | man                   | 22                 | hoesten, benauwdheid, verstopte neus | griep | j                             |
+| developer             | vrouw                 | 55                 | spierpijn, vermoeidheid, neusvleugelen | longontsteking | j                  |
+| developer             | vrouw                 | 88                 | hoesten, niezen, keelpijn | verkoudheid | n (astma)                          |
+| developer             | man                   | 19                 | hoesten, piepende ademhaling, kortademig | bronchitis | n (astma)            |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
@@ -79,10 +79,10 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 4 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
+| developer             | vrouw                 | 24                 | hoesten, hoofdpijn, neusvleugelen, vermoeidheid | longontsteking | j         |
+| developer             | vrouw                 | 43                 | kortademig, benauwdheid, hoesten, piepende ademhaling | astma | j            |
+| developer             | man                   | 20                 | hoesten, keelpijn, spierpijn, hoofdpijn | griep | n (verkoudheid)            |
+| developer             | man                   | 99                 | hoge slijmproductie, koorts, spierpijn, piepende ademhaling | bronchitis | j |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
@@ -94,8 +94,8 @@ In de onderstaande tabellen staan de resultaten van de tests die zijn uitgevoerd
 
 | 5 symptomen ingevoerd | **Gebruikt geslacht** | Gebruikte leeftijd | Gebruikt symptoom | Verwachte voorspelling | **Correcte voorspelling (j/n)** |
 | --------------------- | --------------------- | ------------------ | ----------------- | ---------------------- | ------------------------------- |
-| developer             |                       |                    |                   |                        |                                 |
-| developer             |                       |                    |                   |                        |                                 |
+| developer             | man                   | 44                 | benauwdheid, piepende ademhaling, hoesten, kortademig, koorts | astma | j    |
+| developer             | man                   | 22                 |                   |                        |                                 |
 | developer             |                       |                    |                   |                        |                                 |
 | developer             |                       |                    |                   |                        |                                 |
 | reviewer 1            |                       |                    |                   |                        |                                 |
